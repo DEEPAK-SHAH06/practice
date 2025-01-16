@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>EmployeeList</title>
+</head>
+<body>
+<th:block th:insert="Header.html"></th:block>
+<div class="container-fluid">
+		
+		<div class="card">
+			
+				<div class="card-header bg-primary text-center text-white">
+					<h5>Employee List</h5>
+				</div>
+				<div class="card-body">
+						<table class="table table-stripted">
+						
+						<div>
+								<a href="/employee/excel"><input type="submit" value="Excel " Class ="btn btn-primary"></a>
+								<a href="/employee/pdf"><input type="submit" value="Pdf " Class ="btn btn-success"></a>
+							</div>
+							<thead>
+								<tr>
+									<th>FirstName
+									<th>lastName
+									<th>Gender
+									<th>Phone
+									<th>City
+									<th>Action
+								</tr>	
+							</thead>
+							<tbody>
+								<tr th:each="emp : ${elist}">
+									<td>[[${emp.fname}]]</td>
+									<td>[[${emp.lname}]]</td>
+									<td>[[${emp.gender}]]</td>
+									<td>[[${emp.phone}]]</td>
+									<td>[[${emp.address.city}]]</td>
+									<td>
+										<a th:href="@{/employee/edit(id=${emp.id})}"><input type="submit" value="Edit" class="btn btn-success"></a>
+										<a th:href="@{/employee/delete(id=${emp.id})}"><input type="submit" value="Delete" class="btn btn-danger"></a>
+										<a th:href="@{/employee/view(id=${emp.id})}"><input type="submit" value="View" class="btn btn-primary"></a>
+										
+									</td>	
+								</tr>
+							</tbody>
+						</table>
+						
+				</div>
+				<div class="card-footer bg-warning text-center">
+					copyright@2024
+				</div>
+		
+		</div>
+	
+	</div>
+</body>
+</html>
