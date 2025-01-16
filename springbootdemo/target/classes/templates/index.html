@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+</head>
+<body>
+    <!-- ÅıÇÎ´Ï©ÓˆÔ˚ÒÂ˜Ø∏Œ®Í†¨√∑≈ÁΩ -->
+	<!-- <h1> GOOD MORNING PINAPPLE , LOOKING VERY GOOD VERY NIIIICEE (˚_˚) </h1> 
+	<hr>
+     <a href="/login">Login</a> | <a href="/signUp">SignUp</a> | <a href="/about">AboutUs</a> | <a href="/contact">ContactUs</a> -->
+     
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 15px;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        .navbar .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .navbar .menu {
+            display: flex;
+        }
+        .navbar .menu a {
+            margin-left: 10px;
+        }
+        .navbar-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .navbar-toggle div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 3px 0;
+        }
+        @media (max-width: 768px) {
+            .navbar .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #333;
+            }
+            .navbar .menu.active {
+                display: flex;
+            }
+            .navbar-toggle {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MyWebsite</div>
+        <div class="navbar-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu">
+            <a href="/">Home</a>
+            <a href="/login">Login</a>
+            <a href="/signUp">Sign Up</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/doctor">Doctor</a>
+            <a href="/patient">Patient</a>
+        </div>
+    </nav>
+    
+    <h1> GOOD MORNING PINAPPLE , LOOKING VERY GOOD VERY NIIIICEE (˚_˚) </h1> 
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+     
+</body>
+</html>
